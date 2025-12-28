@@ -21,3 +21,5 @@ I'll keep adding more chapters as I learn more about WebSockets.
 ## Chapters
 
 1. [Chapter 1: WebSocket Handshake – From HTTP to Persistent TCP](https://blog.saurabhkayasth.com/posts/websocket-series/chapter-1-websocket-handshake-from-http-to-persistent-tcp/)
+
+   Code: https://github.com/Saurabh-kayasth/websocket-from-scratch/commit/b67ffdf10358fe98d9ccf869872334827fc63641
