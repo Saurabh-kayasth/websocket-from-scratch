@@ -1,0 +1,5 @@
+const WS_GUID = '258EAFA5-E914-47DA-95CA-C5AB0DC85B11';
+
+const PORT = 5000;
+
+export { PORT, WS_GUID };
