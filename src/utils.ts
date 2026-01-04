@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import type { IncomingMessage } from 'http';
+import type net from 'net';
 import type { Socket } from 'net';
 
 import { WS_GUID } from './constants';
@@ -41,4 +42,18 @@ const handleWebSocketHandshake = (req: IncomingMessage, socket: Socket) => {
   socket.setNoDelay(true);
 };
 
-export { handleWebSocketHandshake };
+const sendWSMessage = (socket: net.Socket, msg: string) => {
+  const payload = Buffer.from(msg);
+
+  const frame = [0x81, payload.length];
+
+  socket.write(Buffer.from(frame));
+  socket.write(payload);
+};
+
+const markBits = (value: number, mask: number) => {
+  // eslint-disable-next-line no-bitwise
+  return value & mask;
+};
+
+export { handleWebSocketHandshake, markBits, sendWSMessage };

@@ -4,6 +4,7 @@ import type { Socket } from 'net';
 
 import { PORT } from './constants';
 import { handleWebSocketHandshake } from './utils';
+import WebSocketFrameParser from './WebSocketFrameParser';
 
 const server = http.createServer(
   (req: IncomingMessage, res: ServerResponse) => {
@@ -15,9 +16,11 @@ const server = http.createServer(
 server.on('upgrade', (req: IncomingMessage, socket: Socket) => {
   handleWebSocketHandshake(req, socket);
 
-  socket.on('data', () => {
+  const parser = new WebSocketFrameParser();
+
+  socket.on('data', (bytes: Buffer) => {
     try {
-      // TODO: Parser
+      parser.parse(bytes);
     } catch (e) {
       console.error(e);
     }
