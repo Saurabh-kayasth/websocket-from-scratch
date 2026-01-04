@@ -23,3 +23,7 @@ I'll keep adding more chapters as I learn more about WebSockets.
 1. [Chapter 1: WebSocket Handshake – From HTTP to Persistent TCP](https://blog.saurabhkayasth.com/posts/websocket-series/chapter-1-websocket-handshake-from-http-to-persistent-tcp/)
 
    Code: https://github.com/Saurabh-kayasth/websocket-from-scratch/commit/b67ffdf10358fe98d9ccf869872334827fc63641
+
+1. [Chapter 2: WebSocket Frame Parser](https://blog.saurabhkayasth.com/posts/websocket-series/chapter-2-websocket-frame-parser/)
+
+   Code: https://github.com/Saurabh-kayasth/websocket-from-scratch/commit/abf253e37bbea038ff7355a220a2574eafbd2ac9
